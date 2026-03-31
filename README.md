@@ -157,6 +157,17 @@ The script publishes these D-Bus paths for each inverter:
 | `/Ac/Energy/Forward` | Total energy produced (kWh) |
 | `/Position` | 0 = AC Input (grid side) |
 
+## Related Projects
+
+This project is part of a Victron Venus OS integration suite:
+
+| Project | Description |
+|---------|-------------|
+| [inverter-control](https://github.com/victron-venus/inverter-control) | ESS external control with web dashboard |
+| [dbus-mqtt-battery](https://github.com/victron-venus/dbus-mqtt-battery) | MQTT to D-Bus bridge for BMS integration |
+| **dbus-tasmota-pv** (this) | Tasmota smart plug as PV inverter on D-Bus |
+| [esphome-jbd-bms-mqtt](https://github.com/victron-venus/esphome-jbd-bms-mqtt) | ESP32 Bluetooth monitor for JBD BMS |
+
 ## License
 
 MIT License
