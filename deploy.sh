@@ -3,7 +3,7 @@
 # Deploy dbus-tasmota-pv to Venus OS
 #
 # Prerequisites:
-#   - SSH config with host 'r' pointing to Venus OS device
+#   - SSH config with host 'Cerbo' pointing to Venus OS device
 #   - SSH key authentication configured
 #
 # Usage: ./deploy.sh [SSH_HOST]
@@ -11,7 +11,7 @@
 
 set -e
 
-SSH_HOST="${1:-r}"
+SSH_HOST="${1:-Cerbo}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REMOTE_DIR="/data/dbus-tasmota-pv"
 
@@ -50,6 +50,6 @@ echo "=============================================="
 echo ""
 echo "The service is now running and will auto-start on reboot."
 echo ""
-echo "To view logs:"
-echo "  ssh $SSH_HOST 'tail -f /var/log/dbus-tasmota-pv/current | tai64nlocal'"
+echo "To view error log:"
+echo "  ssh $SSH_HOST 'tail -f /var/log/dbus-tasmota-pv.log'"
 echo ""
